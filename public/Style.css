@@ -231,7 +231,9 @@ header nav .drop-down-menu{
 }
 
 .wrapper .content .content-list section table tbody tr td{
-    padding: 3%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 7px;
 }
 
 
@@ -543,8 +545,12 @@ header nav .drop-down-menu{
 
     .wrapper{
         width: 100%;
-        margin: 0px;
+        margin: 0%;
         padding: 1%;
+    }
+
+    .wrapper .content{
+        width: 95%;
     }
 
     .form-container{
