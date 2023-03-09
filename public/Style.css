@@ -1,0 +1,574 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Poppins', sans-serif;
+}
+/* ---------------------------- Header -------------------- */
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 2em;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 2em;
+    align-items: center;
+
+}
+
+header nav .drop-down-menu{
+    display: none;
+}
+
+
+
+
+
+/* --------------------------  Login Forms  ---------------------------- */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0%;
+    background-color: #79c6dd26;
+    margin: 3em auto;
+    border-radius: 15px;
+    width: 70%;
+}
+
+
+
+.form-container h1{
+    margin: 1em;
+}
+
+
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    width: 60%;
+}
+
+.form-container form div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    margin: 1em;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.form-container div label{
+    font-size: 1em;
+    margin: 0px 1em;
+}
+
+.form-container div input{
+    padding: 0.5em 1em;
+    width: 60%;
+    max-width: 100%;
+}
+
+.form-container form .submit-btn{
+    padding: 1em 2.3em ;
+    margin: 1em auto;
+    background-color: #79c6dd;
+    border:none;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- ADMIN DASHBOARD ------------------------- */
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0%;
+    background-color:  #79c6dd26;
+    margin: 3em auto;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.wrapper .content{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    background-color: white;
+    width: 80%;
+    padding: 1em 2em;
+    border-radius: 15px;
+    min-height:800px ;
+
+}
+
+
+
+#view{
+    text-decoration:none;
+    color:white;
+    background-color:rgb(15, 102, 146);
+    padding: 2%;
+    border-radius: 7px;
+}
+
+
+
+
+/* ----------------------------- NAV ---------------------------- */
+
+.wrapper .content .admin-nav{
+    background-color: #79c6dd26;
+    padding: 1%;
+    border-radius: 15px;
+
+}
+
+
+#open{
+
+}
+#close{
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+
+.wrapper .content .admin-nav div{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+
+}
+
+.wrapper .content .admin-nav div ul{
+    list-style: none;
+    margin: 2% 2%;
+
+}
+
+.wrapper .content .admin-nav div ul li{
+    margin: 1em 0.5em;
+    padding: 2% 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top: 1px solid rgba(0, 0, 0, 0.219);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+
+}
+
+
+.wrapper .content .admin-nav div ul li:hover{
+    color: gray;
+}
+
+.admin-actions a{
+    text-decoration: none;
+    color: black;
+}
+
+.admin-actions a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
+
+
+/* ------------------------- Tables --------------------------- */
+
+.wrapper .content .content-list{
+    margin-top: 5%;
+    margin-left: 5%;
+    flex-basis: 90%;
+}
+
+.wrapper .content .content-list section{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #79c6dd26;
+    border-radius: 15px;
+}
+
+.wrapper .content .content-list section h2{
+    margin: 1em;
+}
+
+.wrapper .content .content-list section table{
+    padding: 2% 5%;
+}
+.wrapper .content .content-list section table thead th{
+    padding: 1em 2em;
+    margin: 1em 5em;
+}
+
+.wrapper .content .content-list section table tbody tr td{
+    padding: 3%;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------- CLIENT PROFILE -------------------------- */
+
+.wrapper .container{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5%;
+}
+
+.wrapper .profile-content{
+    margin: 1% auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-content h2{
+    text-align: center;
+    margin: 2em;
+}
+
+.wrapper .profile-content .account-details{
+    padding: 1.5em;
+    border-right: 1px solid rgba(128, 128, 128, 0.378);
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .profile-content .account-details .details-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.wrapper .profile-content .account-details ul{
+    list-style: none;
+}
+.wrapper .profile-content .account-details ul li{
+    margin: 1em;
+}
+
+
+
+
+
+.wrapper .profile-content .account-list{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper .profile-content .account-list ul{
+    list-style: none;
+}
+
+.wrapper .profile-content .account-list ul li{
+    margin: 1em;
+}
+
+.wrapper .profile-content .account-list ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper .profile-content .account-list ul a:hover{
+    color: gray;
+}
+
+.money-btn{
+    background-color: #79c6dd50;
+    text-decoration: none;
+    color: black;
+    padding: 0.7em;
+    border-radius: 15px;
+    margin:10%;
+    text-align: center;
+}
+.money-btn:hover{
+    transform:scale(1.1);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------Account Views ----------------------------- */
+
+.view-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2%;
+    padding: 2%;
+}
+
+.view-content ul{
+    list-style: none;
+    width: 40%;
+}
+
+.view-content ul li{
+    padding: 0.5em;
+}
+
+#headings{
+    font-weight: 600;
+}
+
+#data li{
+
+}
+
+
+
+
+
+
+
+
+
+/*------------- Client Money Transfer Table ---------------------------- */
+
+.wrapper .content-req{
+    width: 90%;
+    text-align: center;
+}
+
+.wrapper .content-req table{
+
+    overflow-y:hidden;
+    position: relative;
+    width: 80%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrapper .content-req table tbody tr td{
+    padding: 2%;
+}
+
+
+
+
+
+
+/* -------------------- Admin Money transfer View ------------------- */
+
+.content-trandetails{
+ background-color: white;
+ width: 70%;
+ border-radius: 15px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.content-trandetails .details{
+    width: 40%;
+    margin: 5em auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-trandetails .details ul{
+    list-style: none;
+}
+
+.content-trandetails .details .headings{
+    font-weight: 600;
+}
+
+.content-trandetails .details ul li{
+    margin: 1em;
+}
+
+
+
+
+
+
+
+/* ----------------- Switch ---------------- */
+
+
+
+
+
+
+
+
+
+.status{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+    margin: 0em auto;
+}
+.status span{
+    font-weight: 600;
+}
+
+
+
+
+
+.status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.status h3{
+    margin: 1em 1em;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .status input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  .status input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  .status input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+  @media screen and (max-width: 480px) {
+
+    .wrapper{
+        width: 100%;
+        margin: 0px;
+        padding: 1%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .form-container form{
+        width: 98%;
+
+    }
+
+    .wrapper .content{
+        margin: 1% auto;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper .content .content-list{
+        margin-top: 5%;
+        margin-left: 0%;
+    }
+
+    .wrapper .content .content-list section{
+        overflow-x:auto;
+    }
+
+
+
+
+  }
