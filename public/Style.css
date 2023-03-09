@@ -68,7 +68,7 @@ header nav .drop-down-menu{
     justify-content: space-between;
     margin: 1em;
     align-items: center;
-    padding: 1em 2em;
+    padding: 1em 1em;
 }
 
 .form-container div label{
@@ -536,6 +536,10 @@ header nav .drop-down-menu{
 
 
   @media screen and (max-width: 480px) {
+
+    *{
+        font-size: small;
+    }
 
     .wrapper{
         width: 100%;
