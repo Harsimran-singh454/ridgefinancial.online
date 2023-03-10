@@ -351,7 +351,7 @@ header nav .drop-down-menu{
 
 .view-content ul{
     list-style: none;
-    width: 40%;
+    width: 50%;
 }
 
 .view-content ul li{
@@ -581,4 +581,22 @@ header nav .drop-down-menu{
 
 
 
+
+#headings{
+    font-weight: 500;
+}
+
+.view-content ul{
+    list-style: none;
+    width: auto;
+}
+
+.wrapper .container{
+    width: 90%;
+}
+
+.wrapper .container h1{
+        font-size: large;
+        text-align:center;
+    }
   }
