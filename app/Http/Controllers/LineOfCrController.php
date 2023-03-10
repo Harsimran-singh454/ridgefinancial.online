@@ -62,7 +62,7 @@ class LineOfCrController extends Controller
 
     public function view(){
         $line_oCr = line_of_credit::where('client_id',session('LoggedClient'))->first();
-        return view('Line_Of_Credit',['data'=>$line_oCr]);
+        return view('Line_Of_Credit.view',['data'=>$line_oCr]);
     }
 
     public function delete($id){
