@@ -216,30 +216,32 @@ window.onload = () => {
 
 
 
-    var open = document.getElementById("open");
-    var close = document.getElementById("close");
-    var menu = document.getElementById("menu");
+    // var open = document.getElementById("open");
+    // var close = document.getElementById("close");
+    // var menu = document.getElementById("menu");
 
-    open.onclick = expandMenu;
-    close.onclick = closeMenu;
+    // open.onclick = expandMenu;
+    // close.onclick = closeMenu;
 
-    function expandMenu(){
-        open.style.display = "none";
-        close.style.display = "block";
-        menu.style.display = "flex";
-    }
 
-    function closeMenu(){
-        open.style.display = "block";
-        close.style.display = "none";
-        menu.style.display = "none";
-    }
+    // function expandMenu(){
+    //     open.style.display = "none";
+    //     close.style.display = "block";
+    //     menu.style.display = "flex";
+    // }
+
+    // function closeMenu(){
+    //     open.style.display = "block";
+    //     close.style.display = "none";
+    //     menu.style.display = "none";
+    // }
+
+
 
 
 
 
 }
-
 
 
 

@@ -17,8 +17,8 @@
             <nav class = "admin-nav">
                 <h2 style="text-align:center">Browse</h2>
                 <section>
-                <img id="open" src="/images/arrow_righ.svg"  alt="open-menu">
-                <img id="close" src="/images/arrow_drop_down.svg" alt="close-menu">
+                <img id="open" onclick = expandMenu() src="/images/arrow_righ.svg"  alt="open-menu">
+                <img id="close" onclick = closeMenu() src="/images/arrow_drop_down.svg" alt="close-menu">
                 </section>
                 <div id="menu">
                     <ul>
@@ -279,6 +279,34 @@
     </div>
 
 </main>
+
+
+
+<script>
+
+    var open = document.getElementById("open");
+    var close = document.getElementById("close");
+    var menu = document.getElementById("menu");
+
+    // open.onclick = expandMenu();
+    // close.onclick = closeMenu();
+
+    function expandMenu(){
+        open.style.display = "none";
+        close.style.display = "block";
+        menu.style.display = "flex";
+    }
+
+    function closeMenu(){
+        open.style.display = "block";
+        close.style.display = "none";
+        menu.style.display = "none";
+    }
+
+
+
+</script>
+
 
 
 @include('_partials.footer')
