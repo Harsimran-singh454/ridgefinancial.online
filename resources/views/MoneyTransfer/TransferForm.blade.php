@@ -61,7 +61,7 @@
                 width: 60%;
                 max-width: 100%;" onchange="change()">
                     <option value="card">Card</option>
-                    <option value="e-trans">e-tranfer</option>
+                    <option value="e-trans">e-transfer</option>
                     <option value="dr-dpst">Direct Deposit</option>
                 </select>
             </div>
@@ -124,7 +124,7 @@
                 @error('amount')**{{$message}}  @enderror
             </div>
 
-            <input type="submit" class="submit-btn" value="Submit">
+            <input type="submit" class="submit-btn" value="Transfer">
         </form>
 
     </div>
