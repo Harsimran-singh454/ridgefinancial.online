@@ -1,9 +1,5 @@
 @include('_partials.header')
 
-<header>
-    <title>Update Account</title>
-</header>
-
 <main>
 
     <div class="form-container">
@@ -23,12 +19,75 @@
 
 
             @csrf
-            <h1 style="margin:1em auto">New Line Of Credit Account</h1>
+            <h1 style="margin:1em auto">Update Line Of Credit Account</h1>
+
+            <fieldset>
+                <legend>Clients Information</legend>
+            <div>
+                <label for="title">Title : </label>
+                <input type="text" name="title" required value="{{$info->title}}">
+            </div>
+
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" name="name" required value="{{$info->name}}">
+            </div>
+
+            <div>
+                <label for="DOB">Date of Birth : </label>
+                <input type="date" name="DOB" required value="{{$info->DOB}}">
+            </div>
+
+            <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" required value="{{$info->email}}">
+            </div>
+
+            <div>
+                <label for="phone">Phone number : </label>
+                <input type="number" name="phone" required value="{{$info->phone}}">
+            </div>
+
+            <div>
+                <label for="work_number">Work Number : </label>
+                <input type="number" name="work_number" required value="{{$info->work_number}}">
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" required value="{{$info->address}}">
+            </div>
+
+            <div>
+                <label for="request_amount">Request Amount : </label>
+                <input type="number" name="request_amount" required step="any" value="{{$info->request_amount}}">
+            </div>
+
+            <div>
+                <label for="username">Username : </label>
+                <input type="text" name="username" required value="{{$info->username}}">
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+              <legend>Account Details</legend>
 
             <div>
                 <label for="account_number">Account Number : </label>
                 <input type="number" name="account_number" required value="{{$info->account_number}}">
                 @error('account_number')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="client_id">Client : </label>
+                <select name="client_id" required style="padding: 0.5em 1em;
+                width: 60%;
+                max-width: 100%;">
+              <option value="{{$info->id}}">{{$info->name}}</option>
+                </select>
+                @error('client_id'){{$message}}  @enderror
             </div>
 
             <div>
@@ -44,7 +103,7 @@
             </div>
 
             <div>
-                <label for="authorizations">Authorizations : </label >
+                <label for="authorizations">Authorizations : </label>
                 <input type="number" name="authorizations" value="{{$info->authorizations}}">
                 @error('authorizations')**{{$message}}  @enderror
             </div>
@@ -67,12 +126,10 @@
                 @error('cycle_date')**{{$message}}  @enderror
             </div>
 
+        </fieldset>
 
             <input type="submit" class="submit-btn" value="Submit">
         </form>
-
-<a href="{{route('deleteLoc', $info->id)}}" style="background-color: rgba(237, 36, 36, 0.701); text-decoration:none; color:white; padding: 1%;">Delete</a>
-
 
     </div>
 

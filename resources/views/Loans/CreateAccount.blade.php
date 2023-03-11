@@ -24,8 +24,62 @@
 
 
             @csrf
+
             <h1 style="margin:1em auto">New Loan Account</h1>
 
+
+            <fieldset>
+                <legend>Client's Information</legend>
+
+            <div>
+                <label for="title">Title : </label>
+                <input type="text" name="title" required placeholder="Mr., Mrs., etc.">
+            </div>
+
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div>
+                <label for="DOB">Date of Birth : </label>
+                <input type="date" name="DOB" required>
+            </div>
+
+            <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone number : </label>
+                <input type="number" name="phone" required>
+            </div>
+
+            <div>
+                <label for="work_number">Work Number : </label>
+                <input type="number" name="work_number" required>
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" required>
+            </div>
+
+            <div>
+                <label for="loan_amount">Request Amount : </label>
+                <input type="number" name="loan_amount" required step="any">
+            </div>
+
+            <div>
+                <label for="purpose">Username : </label>
+                <input type="text" name="purpose" required>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Account Details</legend>
             <div>
                 <label for="account_number">Account : </label>
                 <input type="number" name="account_number" required>
@@ -91,6 +145,8 @@
                 <input type="number" name="payment" required step="any">
                 @error('payment')**{{$message}}  @enderror
             </div>
+
+        </fieldset>
 
 
             <input type="submit" class="submit-btn" value="Submit">

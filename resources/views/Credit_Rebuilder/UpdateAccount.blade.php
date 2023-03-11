@@ -23,12 +23,70 @@
 
 
             @csrf
-            <h1 style="margin:1em auto; text-align:center" >New Credit Rebuilder Account</h1>
+            <h1 style="margin:1em auto; text-align:center" >Update Credit Rebuilder Account</h1>
+
+            <fieldset>
+
+                <legend>Client's Details</legend>
+
+
 
             <div>
+                <label for="title">Title : </label>
+                <input type="text" name="title" required value="{{$info->title}}">
+            </div>
+
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" name="name" required value="{{$info->name}}">
+            </div>
+
+            <div>
+                <label for="DOB">Date of Birth : </label>
+                <input type="date" name="DOB" required value="{{$info->DOB}}">
+            </div>
+
+            <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" required value="{{$info->email}}">
+            </div>
+
+            <div>
+                <label for="phone">Phone number : </label>
+                <input type="text" name="phone" required value="{{$info->phone}}">
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" required value="{{$info->address}}">
+            </div>
+
+            <div>
+                <label for="term">Term : </label>
+                <input type="text" name="term" required value="{{$info->term}}">
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>Account Details</legend>
+            <div>
                 <label for="account_number">Account Number : </label>
-                <input type="number" name="account_number" required value="{{$info->account_number}}">
+                <input type="number" name="account_number" required value="{{$info->account_number}}" >
                 @error('account_number')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="client_id">Client : </label>
+                <select name="client_id" required style="padding: 0.5em 1em;
+                width: 60%;
+                max-width: 100%;">
+
+                       <option value="{{$info->id}}">{{$info->name}}</option>
+
+                </select>
+                @error('client_id'){{$message}}  @enderror
             </div>
 
             <div>
@@ -54,12 +112,12 @@
                 <input type="number" name="tot_payments" value="{{$info->tot_payments}}">
                 @error('tot_payments')**{{$message}}  @enderror
             </div>
-
+{{--
             <div>
-                <label for="tot_payments_toDate">Total Payments to Date : </label>
-                <input type="number" name="tot_payments_toDate" value="{{$info->tot_payments_toDate}}">
-                @error('tot_payments_toDate')**{{$message}}  @enderror
-            </div>
+                <label for="term">Total Payments to Date : </label>
+                <input type="number" name="term" value="{{$info->id}}">
+                @error('term')**{{$message}}  @enderror
+            </div> --}}
 
             <div>
                 <label for="due_date">Due date : </label>
@@ -67,11 +125,10 @@
                 @error('due_date')**{{$message}}  @enderror
             </div>
 
+        </fieldset>
 
             <input type="submit" class="submit-btn" value="Submit">
         </form>
-<a href="{{route('deleteCardrb', $info->id)}}" style="background-color: rgba(237, 36, 36, 0.701); text-decoration:none; color:white; padding: 1%;">Delete</a>
-
 
     </div>
 

@@ -33,6 +33,8 @@
                         <li id="scard-btn">Secured Cards</li>
                         <li id="cardrb-btn">Credit Rebuilder</li>
                         <li id="moneyt-btn">Money Transfer Requests</li>
+                        <li id="inquiry-btn">New Inquiries</li>
+
 
                     </ul>
 
@@ -57,7 +59,8 @@
                     <a href="{{route('AdminRegister')}}" style="background: rgb(21, 205, 21); width: 10%;
                                 color:white; border-radius:8px; padding: 1% 2%;
                                 black; text-decoration:none;">Add</a>
-                    <table>
+
+                        <table style="overflow-x: auto;">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -118,7 +121,7 @@
                     <a href="{{route('AddLoan')}}" style="background: rgb(21, 205, 21); width: 10%;
                     color:white; border-radius:8px; padding: 1% 2%;
                     black;font-size:1em; text-decoration:none;">Add</a>
-                    <table>
+                    <table style="overflow-x: auto;">
                         <thead>
                             <tr>
                                 <th>Account Number</th>
@@ -150,7 +153,7 @@
                     <a href="{{route('AddLineOfCr')}}" style="background: rgb(21, 205, 21); width: 10%;
                     color:white; border-radius:8px; padding: 1% 2%;
                     black;font-size:1em; text-decoration:none;">Add</a>
-                    <table>
+                    <table style="overflow-x: auto;">
                         <thead>
                             <tr>
                                 <th>Account Number</th>
@@ -181,7 +184,7 @@
                     <a href="{{route('AddSecuredCard')}}" style="background: rgb(21, 205, 21); width: 10%;
                     color:white; border-radius:8px; padding: 1% 2%;
                     black;font-size:1em; text-decoration:none;">Add</a>
-                    <table>
+                    <table style="overflow-x: auto;">
                         <thead>
                             <tr>
                                 <th>Account Number</th>
@@ -193,7 +196,7 @@
                         <tbody>
                             @foreach ($secu_cards as $secu_card)
                             <tr>
-                                <td>{{$secu_card->account_number}}</td>
+                                <td>{{$secu_card->name}}</td>
                                 @foreach ($clients as $client)
                                 @if ($client->id == $secu_card->client_id)
                                 <td>{{$client->name}}</td>
@@ -212,7 +215,7 @@
                     <a href="{{route('AddCreditRebuilder')}}" style="background: rgb(21, 205, 21); width: 10%;
                     color:white; border-radius:8px; padding: 1% 2%;
                     black;font-size:1em; text-decoration:none;">Add</a>
-                    <table>
+                    <table style="overflow-x: auto;">
                         <thead>
                             <tr>
                                 <th>Account Number</th>
@@ -263,6 +266,36 @@
                                 <td>{{$moneyt->using}}</td>
                                 <td>{{$moneyt->transferStatus}}</td>
                                 <td> <a id="view" href="{{route('transferdetails', $moneyt->id)}}">View</a></td>
+                            </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                </section>
+
+
+
+                <section id="inquiry-section">
+                    <h2>Inquires</h2>
+
+                    <table style="overflow-x: auto; padding:0px;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($inquiries as $inquiry)
+                            <tr>
+                                <td>{{$inquiry->name}}</td>
+                                <td>{{$inquiry->phone}}</td>
+                                <td>{{$inquiry->service}}</td>
+                                <td>{{$inquiry->status}}</td>
+                                <td> <a id="view" href="{{route('viewreq', $inquiry->id)}}">View</a></td>
                             </tr>
                             @endforeach
 

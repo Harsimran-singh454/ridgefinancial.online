@@ -48,7 +48,7 @@ window.onload = () => {
     var credit_rebuildertable = document.getElementById("credit-rebuilder");
     var moneyt_table = document.getElementById("moneyt-section");
     var admin_table = document.getElementById("admins");
-
+    var inquiry_table = document.getElementById("inquiry-section");
 
 
 
@@ -62,6 +62,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
 
         // -------- background colour ---------------
@@ -73,6 +74,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
     }
 
 
@@ -87,6 +89,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
 
         // -------- background colour ---------------
@@ -97,6 +100,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
 
     }
 
@@ -111,6 +115,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
         // -------- background colour ---------------
 
@@ -121,6 +126,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
 
     }
 
@@ -134,6 +140,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
         // -------- background colour ---------------
 
@@ -144,6 +151,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
     }
 
 
@@ -157,6 +165,7 @@ window.onload = () => {
         secured_cardstable.style.display = "flex";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
         // -------- background colour ---------------
 
@@ -167,6 +176,7 @@ window.onload = () => {
         scardbtn.style.background = "white";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
     }
 
     var cardrbbtn = document.getElementById("cardrb-btn");
@@ -179,6 +189,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "flex";
         moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "none";
 
         // -------- background colour ---------------
 
@@ -189,6 +200,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "white";
         moneyt.style.background = "";
+        inquiryt.style.background = "";
     }
 
     var moneyt = document.getElementById("moneyt-btn");
@@ -201,6 +213,7 @@ window.onload = () => {
         secured_cardstable.style.display = "none";
         credit_rebuildertable.style.display = "none";
         moneyt_table.style.display = "flex";
+        inquiry_table.style.display  = "none";
 
         // -------- background colour ---------------
 
@@ -211,9 +224,33 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "white";
+        inquiryt.style.background = "";
 
     }
 
+    var inquiryt = document.getElementById("inquiry-btn");
+    inquiryt.onclick = showInquiryt;
+    function showInquiryt(){
+        admin_table.style.display = "none";
+        loanstable.style.display = "none";
+        clienttable.style.display = "none";
+        line_of_crtable.style.display = "none";
+        secured_cardstable.style.display = "none";
+        credit_rebuildertable.style.display = "none";
+        moneyt_table.style.display = "none";
+        inquiry_table.style.display  = "flex";
+
+        // -------- background colour ---------------
+
+        admins.style.background = "";
+        clients.style.background = "";
+        loans.style.background = "";
+        linecr.style.background = "";
+        scardbtn.style.background = "";
+        cardrbbtn.style.background = "";
+        moneyt.style.background = "";
+        inquiryt.style.background = "white";
+    }
 
 
     // var open = document.getElementById("open");

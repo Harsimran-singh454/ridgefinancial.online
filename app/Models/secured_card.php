@@ -11,6 +11,25 @@ class secured_card extends Model
     protected $table = 'secured_card';
         public $timestamps = true;
         protected $fillable = [
+
+            'name',
+            'name_card',
+            'DOB',
+            'marital_status',
+            'email',
+            'phone',
+            'address',
+            'mailing_address',
+            'request_limit',
+
+            'cred_card_inst',
+            'transfer_amount',
+            'acc_number',
+            'approved',
+
+            'status',
+
+
             'account_number',
             'client_id',
             'credit_limit',

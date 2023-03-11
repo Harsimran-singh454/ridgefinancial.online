@@ -10,6 +10,8 @@ use App\Models\line_of_credit;
 use App\Models\loan;
 use App\Models\money_transfer;
 use App\Models\secured_card;
+use App\Models\inquiries;
+
 
 use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
@@ -95,6 +97,7 @@ class AdminController extends Controller
             $line_oCr_list = line_of_credit::all();
             $securedCard_list = secured_card::all();
             $moneytrans_list = money_transfer::all();
+            $inquiry_list = inquiries::all();
             return view('Admin.Dashboard',['admin'=>$data,
                                             'clients'=>$clientList,
                                             'admins'=>$admins,
@@ -102,7 +105,8 @@ class AdminController extends Controller
                                             'cr_rbs'=> $credit_reb_list,
                                             'lineOcrs'=> $line_oCr_list,
                                             'moneyts' => $moneytrans_list,
-                                            'secu_cards' => $securedCard_list]);
+                                            'secu_cards' => $securedCard_list,
+                                            'inquiries' => $inquiry_list]);
         } else {
             return redirect('/');
         }

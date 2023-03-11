@@ -13,17 +13,29 @@ return new class extends Migration
     {
         Schema::create('credit_rebuilder', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('account_number');
-            $table->bigInteger('client_id')->unsigned();
+
+            $table->string('title');
+            $table->string('name');
+            $table->date('DOB');
+            $table->string('email');
+            $table->integer('phone');
+            $table->string('address');
+            $table->string('term');
+
+            $table->string('status')->nullable()->default('under-review');
+
+            $table->bigInteger('account_number')->nullable();
+            $table->bigInteger('client_id')->unsigned()->nullable();
             $table->foreign('client_id')->references('id')->on('client')->onDelete('cascade');
             $table->decimal('monthly_fee', 10, 2)->nullable();
             $table->decimal('amount_saved', 10, 2)->nullable();
-            $table->integer('tot_lineOfCr')->unsigned();
-            $table->integer('tot_payments')->unsigned();
-            $table->integer('tot_payments_toDate')->unsigned();
-            $table->date('due_date');
-            $table->timestamps();
+            $table->integer('tot_lineOfCr')->unsigned()->nullable();
+            $table->integer('tot_payments')->unsigned()->nullable();
+            $table->date('due_date')->nullable();
             $table->decimal('amount', 5, 2)->nullable()->default(123.45);
+
+            $table->timestamps();
+
         });
     }
 

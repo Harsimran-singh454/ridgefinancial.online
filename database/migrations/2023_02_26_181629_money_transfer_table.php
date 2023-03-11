@@ -21,7 +21,7 @@ return new class extends Migration
 
             $table->bigInteger('card_number')->nullable();
             $table->string('rec_email')->nullable();
-            $table->$table->bigInteger('LOC_num')->nullable();
+            $table->bigInteger('LOC_num')->nullable();
             $table->integer('transit')->nullable();
             $table->tinyInteger('inst_number')->nullable();
             $table->bigInteger('account_number')->nullable();

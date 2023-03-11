@@ -40,6 +40,21 @@ class ClientController extends Controller
 
 
 
+    public function clientLoginForm(){
+        if(session('LoggedClient')){
+            return redirect()->route('clientProfile');
+        }
+        elseif(session('LoggedUser')){
+            return redirect()->route('Dashboard');
+        }
+        else{
+            return view('Client.LoginClient');
+        }
+    }
+
+
+
+
     public function Clientlogin(Request $request){
         $request->validate([
             'email' => 'required',

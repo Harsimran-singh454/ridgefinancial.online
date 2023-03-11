@@ -23,7 +23,61 @@
 
 
             @csrf
-            <h1 style="margin:1em auto">New Line Of Credit Account</h1>
+
+            <h1 style="margin:1em auto">Request Line of Credit Account.</h1>
+
+            <fieldset>
+                <legend>Clients Information</legend>
+            <div>
+                <label for="title">Title : </label>
+                <input type="text" name="title" required placeholder="Mr., Mrs., etc.">
+            </div>
+
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div>
+                <label for="DOB">Date of Birth : </label>
+                <input type="date" name="DOB" required>
+            </div>
+
+            <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone number : </label>
+                <input type="number" name="phone" required>
+            </div>
+
+            <div>
+                <label for="work_number">Work Number : </label>
+                <input type="number" name="work_number" required>
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" required>
+            </div>
+
+            <div>
+                <label for="request_amount">Request Amount : </label>
+                <input type="number" name="request_amount" required step="any">
+            </div>
+
+            <div>
+                <label for="username">Username : </label>
+                <input type="text" name="username" required>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+              <legend>Account Details</legend>
 
             <div>
                 <label for="account_number">Account Number : </label>
@@ -79,6 +133,7 @@
                 @error('cycle_date')**{{$message}}  @enderror
             </div>
 
+        </fieldset>
 
             <input type="submit" class="submit-btn" value="Submit">
         </form>

@@ -8,7 +8,7 @@
 
     <div class="form-container">
 
-        <form action="{{route('editloanprocc', $info->id)}}" method="post">
+        <form action="{{route('editloanprocc', $info->id)}}" method="post" >
 
 
             @if(Session::get('Success'))
@@ -23,12 +23,76 @@
 
 
             @csrf
-            <h1 style="margin:1em auto">New Loan Account</h1>
+            <h1 style="margin:1em auto">Update Loan Account</h1>
 
+            <fieldset>
+                <legend>Client's Information</legend>
+
+            <div>
+                <label for="title">Title : </label>
+                <input type="text" name="title" required value="{{$info->title}}">
+            </div>
+
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" name="name" required value="{{$info->name}}">
+            </div>
+
+            <div>
+                <label for="DOB">Date of Birth : </label>
+                <input type="date" name="DOB" required value="{{$info->DOB}}">
+            </div>
+
+            <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" required value="{{$info->email}}">
+            </div>
+
+            <div>
+                <label for="phone">Phone number : </label>
+                <input type="number" name="phone" required value="{{$info->phone}}">
+            </div>
+
+            <div>
+                <label for="work_number">Work Number : </label>
+                <input type="number" name="work_number" required value="{{$info->work_number}}">
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" required value="{{$info->address}}">
+            </div>
+
+            <div>
+                <label for="loan_amount">Request Amount : </label>
+                <input type="number" name="loan_amount" required step="any" value="{{$info->loan_amount}}">
+            </div>
+
+            <div>
+                <label for="purpose">Username : </label>
+                <input type="text" name="purpose" required value="{{$info->purpose}}">
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Account Details</legend>
             <div>
                 <label for="account_number">Account : </label>
                 <input type="number" name="account_number" required value="{{$info->account_number}}">
                 @error('account_number')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="client_id">Client : </label>
+                <select name="client_id" required style="padding: 0.5em 1em;
+                width: 60%;
+                max-width: 100%;">
+
+                       <option value="{{$info->id}}">{{$info->name}}</option>
+
+                </select>
+                @error('client_id'){{$message}}  @enderror
             </div>
 
             <div>
@@ -79,10 +143,11 @@
                 @error('payment')**{{$message}}  @enderror
             </div>
 
+        </fieldset>
+
 
             <input type="submit" class="submit-btn" value="Submit">
         </form>
-        <a href="{{route('deleteLoan', $info->id)}}" style="background-color: rgba(237, 36, 36, 0.701); text-decoration:none; color:white; padding: 1%;">Delete</a>
 
     </div>
 

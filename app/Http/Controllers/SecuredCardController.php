@@ -13,25 +13,30 @@ class SecuredCardController extends Controller
 
 
     public function createAccountForm(){
-        $client = client::all();
-        $account = secured_card::all();
-        return view('Secured_Card.CreateAccount',['clients'=>$client, 'accounts'=>$account]);
+        $data = client::all();
+        return view('Secured_Card.CreateAccount',['clients'=>$data]);
+    }
+
+
+
+    public function processForm($id){
+        $data = secured_card::find($id);
+        if($data)
+        return view('Secured_Card.processAccount',['data'=>$data]);
     }
 
 
     public function createAccount(Request $request){
         $request->validate([
-            'account_number' => 'required',
-            'client_id' => 'unique:secured_card,client_id',
-            'credit_limit' => 'required',
-            'current_balance' => 'required',
-            'authorizations' => 'required',
-            'credit_remaining' => 'required',
-            'due_date' => 'required',
-            'cycle_date' => 'required',
-            'transactions' => 'required',
-            'card_number' => 'required',
-            'pin_number' => 'required',
+            'name' => 'required',
+            'name_card' => 'required',
+
+            'DOB' => 'required',
+            'marital_status' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'mailing_address' => 'required',
             ]);
 
         $data = secured_card::create($request->all());

@@ -27,7 +27,7 @@ class CreditRebuilderController extends Controller
             'amount_saved' => 'required',
             'tot_lineOfCr' => 'required',
             'tot_payments' => 'required',
-            'tot_payments_toDate' => 'required',
+            'term' => 'required',
             'due_date' => 'required',
             ]);
 

@@ -9,6 +9,11 @@ use App\Http\Controllers\LineOfCrController;
 use App\Http\Controllers\LoanController;
 use App\Http\Controllers\SecuredCardController;
 use App\Http\Controllers\MoneyTransferController;
+use App\Http\Controllers\InquiriesController;
+
+use App\Models\inquiries;
+
+
 
 
 /*
@@ -48,7 +53,7 @@ Route::post('/proccessingpasswordA/{id}',[AdminController::class,'changePassword
 Route::get('/newclient',function(){return view('Client.RegisterClient');})->name('AddClient')->middleware(admin::class);
 Route::post('/proccessingclient',[ClientController::class,'createClient'])->name('createClient');
 
-Route::get('/',function(){return view('Client.LoginClient');})->name('ClientLogin');
+Route::get('/',[ClientController::class, 'clientLoginForm'])->name('ClientLogin');
 Route::post('/proccessinglog',[ClientController::class,'Clientlogin'])->name('loggingclient');
 Route::get('/profile',[ClientController::class,'profile'])->name('clientProfile');
 Route::get('/logout',[ClientController::class,'logout'])->name("logoutClient");
@@ -69,7 +74,7 @@ Route::post('/selfproc/{id}',[ClientController::class, 'selfUpdateProccess'])->n
 
 // +++++++++++++++++++++   CREDIT REBUILDER   ++++++++++++++++++++++++
 
-Route::get('/newcrbuilder',[CreditRebuilderController::class,'createAccountForm'])->name('AddCreditRebuilder')->middleware(admin::class);
+Route::get('/newcrbuilder',[CreditRebuilderController::class,'createAccountForm'])->name('AddCreditRebuilder');
 Route::post('/proccessingcrbldraccount',[CreditRebuilderController::class,'createAccount'])->name('NewCreditBuilderAccount');
 
 route::get('/crbaccount',[CreditRebuilderController::class,'view'])->name('crbview');
@@ -86,7 +91,7 @@ Route::get('/deletecrb/{id}',[CreditRebuilderController::class,'delete'])->name(
 
 // +++++++++++++++++++++   LINE OF CREDIT   ++++++++++++++++++++++++
 
-Route::get('/newlineofcr',[LineOfCrController::class,'createAccountForm'])->name('AddLineOfCr')->middleware(admin::class);
+Route::get('/newlineofcr',[LineOfCrController::class,'createAccountForm'])->name('AddLineOfCr');
 Route::post('/proccessinglnofcraccount',[LineOfCrController::class,'createAccount'])->name('newLineOfCr');
 
 route::get('/locraccount',[LineOfCrController::class,'view'])->name('locrview');
@@ -105,7 +110,7 @@ Route::get('/deleteloc/{id}',[LineOfCrController::class,'delete'])->name("delete
 // +++++++++++++++++++++   LOAN   ++++++++++++++++++++++++
 
 
-Route::get('/newloan',[LoanController::class,'createAccountForm'])->name('AddLoan')->middleware(admin::class);
+Route::get('/newloan',[LoanController::class,'createAccountForm'])->name('AddLoan');
 Route::post('/proccessingloanaccount',[LoanController::class,'createAccount'])->name('newLoanAcc');
 
 route::get('/loanaccount',[LoanController::class,'view'])->name('loanrview');
@@ -137,18 +142,47 @@ Route::any('/decline/{id}',[MoneyTransferController::class,'reject'])->name('dec
 
 
 
-
-
 // +++++++++++++++++++++   SECURED CARD    ++++++++++++++++++++++++
 
 
-Route::get('/newsecuredcard',[SecuredCardController::class,'createAccountForm'])->name('AddSecuredCard')->middleware(admin::class);
+Route::get('/newsecuredcard',[SecuredCardController::class,'createAccountForm'])->name('AddSecuredCard');
 Route::post('/proccessingscrdcrdaccount',[SecuredCardController::class,'createAccount'])->name('newSecurdCard');
 
 route::get('/seccardaccount',[SecuredCardController::class,'view'])->name('seccrrview');
 
-Route::get('/editscrcard/{id}',[SecuredCardController::class,'updatePage'])->name('editscrcard')->middleware(admin::class);
+Route::get('/editscrcard/{id}',[SecuredCardController::class,'updatePage'])->name('editscrcard');
 Route::post('/editscrcardprocc/{id}',[SecuredCardController::class,'update'])->name('editscrcardprocc');
 
 
 Route::get('/deletesecrd/{id}',[SecuredCardController::class,'delete'])->name("deleteSecrd");
+
+
+
+
+
+// ++++++++++++++++++++++  INQUIRIES  +++++++++++++++++++++++++++++0
+
+
+Route::get('newinquiry', function () {
+    return view('Inquiries.NewInquiry');
+});
+
+Route::post('sendingreq', [InquiriesController::class, 'submitReq'])->name('sendreq');
+
+Route::any('req/{id}', [InquiriesController::class, 'view'])->name('viewreq');
+
+Route::any('markdone/{id}', function($id){
+    $data = inquiries::find($id);
+    $data->status = 'Approved';
+    $data->save();
+    return redirect()->back();
+})->name('markdone');
+
+
+Route::any('reject/{id}', function($id){
+    $data = inquiries::find($id);
+    $data->status = 'Rejected';
+    $data->save();
+    return redirect()->back();
+})->name('reject');
+

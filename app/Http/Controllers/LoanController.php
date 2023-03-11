@@ -43,7 +43,7 @@ class LoanController extends Controller
     public function updatePage($id){
         // $data = admin::where('id','=',session('LoggedUser'))->first();
         $info = loan::find($id);
-        return view('Line_Of_Credit.UpdateAccount',['info'=>$info]);
+        return view('Loans.UpdateAccount',['info'=>$info]);
     }
 
     public function update(Request $req, $id){

@@ -15,7 +15,7 @@
                     <li> Credit Limit :</li>
                     <li> Current Balance :</li>
                     <li> Authorizations :</li>
-                    <li> Credit Remainig:</li>
+                    <li> Credit Remaining :</li>
                     <li> Due Date :</li>
                     <li> Cycle Date :</li>
                 </ul>

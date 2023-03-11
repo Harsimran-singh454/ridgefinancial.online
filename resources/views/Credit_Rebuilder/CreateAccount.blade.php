@@ -22,88 +22,110 @@
             @endif
 
             @csrf
-            <h1 style="margin:1em auto; text-align:center">Request Credit Rebuilder Account</h1>
+            <h1 style="margin:1em auto; text-align:center">New Credit Rebuilder Account</h1>
+
+
+            <fieldset>
+
+                <legend>Client's Details</legend>
+
+
 
             <div>
-                <label for="name">Your Name : </label>
-                <input type="text" name="name" required value="{{old('name')}}" >
-                @error('name')**{{$message}}  @enderror
+                <label for="title">Title : </label>
+                <input type="text" name="title" required placeholder="Mr., Mrs., etc.">
             </div>
 
             <div>
-                <label for="name_card">Name to appear on the card : </label>
-                <input type="text" name="name_card" required value="{{old('name_card')}}" >
-                @error('name_card')**{{$message}}  @enderror
-            </div>
-
-            <div>
-                <label for="gender">Gender : </label>
-                <select name="gender" required style="padding: 0.5em 1em;
-                width: 60%;
-                max-width: 100%;">
-                       <option value="">--Select--</option>
-                       <option value="male">Male</option>
-                       <option value="female">Female</option>
-                </select>
-                @error('gender'){{$message}}  @enderror
+                <label for="name">Name : </label>
+                <input type="text" name="name" required>
             </div>
 
             <div>
                 <label for="DOB">Date of Birth : </label>
-                <input type="date" name="DOB" step="any" value="{{old('DOB')}}">
-                @error('DOB')**{{$message}}  @enderror
+                <input type="date" name="DOB" required>
             </div>
 
             <div>
-                <label for="marital_status">Marital Status : </label>
-                <select name="marital_status" required style="padding: 0.5em 1em;
-                width: 60%;
-                max-width: 100%;">
-                       <option value="">--Select--</option>
-                       <option value="single">Single</option>
-                       <option value="married">Married</option>
-                       <option value="divorced">Divorced</option>
-                       <option value="widow(er)">Widow(er)</option>
-                </select>
-                @error('marital_status')**{{$message}}  @enderror
+                <label for="email">Email : </label>
+                <input type="text" name="email" required>
             </div>
 
             <div>
-                <label for="email">E-mail : </label>
-                <input type="email" name="email" value="{{old('email')}}">
-                @error('tot_lineOfCr')**{{$message}}  @enderror
-            </div>
-
-            <div>
-                <label for="phone">Phone Number : </label>
-                <input type="number" name="phone" value="{{old('tot_payments')}}">
-                @error('tot_payments')**{{$message}}  @enderror
+                <label for="phone">Phone number : </label>
+                <input type="text" name="phone" required>
             </div>
 
             <div>
                 <label for="address">Address : </label>
+                <input type="text" name="address" required>
+            </div>
+
+            <div>
+                <label for="term">Term : </label>
+                <input type="text" name="term" required>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>Account Details</legend>
+            <div>
+                <label for="account_number">Account Number : </label>
+                <input type="number" name="account_number" required value="{{old('account_number')}}" >
+                @error('account_number')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="client_id">Client : </label>
+                <select name="client_id" required style="padding: 0.5em 1em;
+                width: 60%;
+                max-width: 100%;">
+                    @foreach($clients as $client)
+                       <option value="{{$client->id}}">{{$client->name}}</option>
+                    @endforeach
+                </select>
+                @error('client_id'){{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="monthly_fee">Monthly Fee : </label>
+                <input type="number" name="monthly_fee" step="any" value="{{old('monthly_fee')}}">
+                @error('monthly_fee')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="amount_saved">Amount Saved : </label>
+                <input type="number" name="amount_saved" step="any" value="{{old('amount_saved')}}">
+                @error('amount_saved')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="tot_lineOfCr">Total Line of Credit : </label>
+                <input type="number" name="tot_lineOfCr" step="any" value="{{old('tot_lineOfCr')}}">
+                @error('tot_lineOfCr')**{{$message}}  @enderror
+            </div>
+
+            <div>
+                <label for="tot_payments">Total Payments : </label>
+                <input type="number" name="tot_payments" value="{{old('tot_payments')}}">
+                @error('tot_payments')**{{$message}}  @enderror
+            </div>
+{{--
+            <div>
+                <label for="tot_payments_toDate">Total Payments to Date : </label>
                 <input type="number" name="tot_payments_toDate" value="{{old('tot_payments_toDate')}}">
                 @error('tot_payments_toDate')**{{$message}}  @enderror
-            </div>
+            </div> --}}
 
             <div>
-                <label for="mailing_address">Mailing Address : </label>
-                <input type="text" name="mailing_address" value="{{old('mailing_address')}}">
-                @error('mailing_address')**{{$message}}  @enderror
+                <label for="due_date">Due date : </label>
+                <input type="date" name="due_date" value="{{old('due_date')}}">
+                @error('due_date')**{{$message}}  @enderror
             </div>
 
-            <h4 style="text-align: center">Optional Fields</h4>
-
-            <div>
-                <label for="request_limit">Requested Limit : </label>
-                <input type="number" step="any" name="request_limit" value="{{old('request_limit')}}">
-            </div>
-
-            <div>
-                <label for="request_limit">Requested Limit : </label>
-                <input type="number" step="any" name="request_limit" value="{{old('request_limit')}}">
-            </div>
-
+        </fieldset>
 
             <input type="submit" class="submit-btn" value="Submit">
         </form>

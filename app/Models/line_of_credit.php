@@ -11,6 +11,18 @@ class line_of_credit extends Model
     protected $table = 'line_of_credit';
         public $timestamps = true;
         protected $fillable = [
+
+            'title',
+            'name',
+            'DOB',
+            'email',
+            'phone',
+            'work_number',
+            'address',
+            'request_amount',
+            'username',
+            'status',
+
             'account_number',
             'client_id',
             'credit_limit',
