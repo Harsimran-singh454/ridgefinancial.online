@@ -22,7 +22,7 @@
                             <li><strong>Email :</strong> </li>
                             <li><strong>Address :</strong> </li>
                             <li><strong>Phone :</strong> </li>
-                            <li><strong>Pin :</strong> </li>
+                            <li><strong>Support PIN :</strong> </li>
                         </ul>
                         <ul>
                             <li>{{$client->name}}</li>

@@ -34,7 +34,7 @@
 
             <div>
                 <label for="contact">Phone Number : </label>
-                <input type="number" name="contact" value="{{$client->contact}}">
+                <input type="tel" name="contact" value="{{$client->contact}}">
             </div>
             @error('contact')**{{$message}}  @enderror
 

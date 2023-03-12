@@ -47,7 +47,7 @@
 
             <div>
                 <label for="contact">Phone Number : </label>
-                <input type="number" name="contact">
+                <input type="tel" name="contact">
             </div>
             @error('contact')**{{$message}}  @enderror
 
