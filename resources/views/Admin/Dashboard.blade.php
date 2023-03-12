@@ -60,6 +60,7 @@
                         </ul>
                         <li id="moneyt-btn">Money Transfer Requests</li>
                         <li id="inquiry-btn">New Inquiries</li>
+                        <li id="BAN-btn"> <a href="" style="text-decoration:none; color:black">Create Billing Account</a> </li>
 
 
                     </ul>

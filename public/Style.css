@@ -96,6 +96,14 @@ header nav .drop-down-menu{
     max-width: 100%;
 }
 
+.form-container select{
+    padding: 0.5em 1em;
+    width: 40%;
+    max-width: 100%;
+}
+
+
+
 .form-container form .submit-btn{
     padding: 1em 2.3em ;
     margin: 1em auto;

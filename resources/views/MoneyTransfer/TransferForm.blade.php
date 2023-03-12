@@ -36,9 +36,7 @@
 
                 <label for="client_id">Select Account : </label>
 
-                <select name="client_id" required style="padding: 0.5em 1em;
-                                                         width: 60%;
-                                                         max-width: 100%;">
+                <select name="client_id" required >
                    <option value="{{$client->id}}">{{$client->name}}</option>
 
                 </select>
@@ -57,9 +55,7 @@
 <hr>
             <div>
                 <label for="using">Method : </label>
-                <select name="using" id="method" style="padding: 0.5em 1em;
-                width: 60%;
-                max-width: 100%;" onchange="change()">
+                <select name="using" id="method" onchange="change()">
                     <option value="card">Card</option>
                     <option value="e-trans">e-transfer</option>
                     <option value="dr-dpst">Direct Deposit</option>
