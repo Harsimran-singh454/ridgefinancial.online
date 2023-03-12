@@ -28,6 +28,19 @@ header nav .drop-down-menu{
 }
 
 
+.sub-nav a{
+    list-style-type: disc;
+    text-decoration: none;
+    color:black;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.sub-nav a li{
+    border-style: none !important;
+}
+
+
 
 
 
@@ -59,6 +72,7 @@ header nav .drop-down-menu{
     background-color: white;
     border-radius: 15px;
     width: 70%;
+    padding: 3%;
 }
 
 .form-container form div{
@@ -91,9 +105,23 @@ header nav .drop-down-menu{
 }
 
 .form-container form fieldset{
-    margin: 2%;
-    padding: 0px;
+    background-color: #98dbf01f;
+    border-style: none;
+    margin: 5% 10%;
+    padding: 5%;
 }
+
+#trans-bal {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-container form fieldset legend{
+    font-size: 24px;
+    font-weight: 500;
+}
+
 
 .form-container form fieldset div{
     margin: 0%;

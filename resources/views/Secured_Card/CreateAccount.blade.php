@@ -95,7 +95,7 @@
                 <fieldset>
                 <legend>Transfer Balance (Optional)</legend>
 
-                <div>
+                <div id="trans-bal">
 
                     <label for="cred_card_inst">Credit Card Institution : </label>
                     <input type="number" step="any" name="cred_card_inst" value="{{old('cred_card_inst')}}">

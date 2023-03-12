@@ -17,7 +17,12 @@
 </head>
 <body>
 <header>
-<img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt="">
+        @if(Session::has('LoggedUser'))
+        <a href="{{route('Dashboard')}}"><img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt=""></a>
+        @elseif(Session::has('LoggedClient'))
+        <a href="{{route('clientProfile')}}"><img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt=""></a>
+        @endif
+
 <nav>
     <div>
         @if(Session::has('LoggedUser'))

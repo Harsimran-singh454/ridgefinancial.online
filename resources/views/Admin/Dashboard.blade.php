@@ -25,13 +25,39 @@
 
                     @if ($admin->role == 'level1')
                         <li id="admin-btn">Admins</li>
+                        <ul style="display:none" class="sub-nav" id="admin-sub">
+                            <a href="{{route('AdminRegister')}}"><li>Add Admin</li></a>
+                            <a href=""><li>View Admins</li></a>
+
+                        </ul>
                     @endif
 
                         <li id="client-btn">Clients</li>
+                        <ul style="display:none" class="sub-nav" id="client-sub">
+                            <a href="{{route('AddClient')}}"><li>Add Client</li></a>
+                            <a href=""><li>View Clients</li></a>
+
+                        </ul>
                         <li id="loan-btn">Loans</li>
+                        <ul style="display:none" class="sub-nav" id="loan-sub">
+                            <a href="{{route('AddLoan')}}"><li>Add New</li></a>
+                            <a href=""><li>View Requests</li></a>
+                        </ul>
                         <li id="linecr-btn">Line Of Credit</li>
+                        <ul style="display:none" class="sub-nav" id="loc-sub">
+                            <a href="{{route('AddLineOfCr')}}"><li>Add New</li></a>
+                            <a href=""><li>View Requests</li></a>
+                        </ul>
                         <li id="scard-btn">Secured Cards</li>
+                        <ul style="display:none" class="sub-nav" id="scard-sub">
+                            <a href="{{route('AddSecuredCard')}}"><li>Add New</li></a>
+                            <a href=""><li>View Requests</li></a>
+                        </ul>
                         <li id="cardrb-btn">Credit Rebuilder</li>
+                        <ul style="display:none" class="sub-nav" id="cardrb-sub">
+                            <a href="{{route('AddCreditRebuilder')}}"><li>Add New</li></a>
+                            <a href=""><li>View Requests</li></a>
+                        </ul>
                         <li id="moneyt-btn">Money Transfer Requests</li>
                         <li id="inquiry-btn">New Inquiries</li>
 

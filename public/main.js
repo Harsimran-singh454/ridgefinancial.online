@@ -7,7 +7,7 @@ window.onload = () => {
     if(noloc){
     noloc.onclick = nolocalert;
     function nolocalert(){
-        alert("You do not have a Line of Credit account. Call +1-(877)-328-4495 to open one");
+        alert("You do not have Line Of Credit, to open one, please call (877) 328-4495.");
     }
 }
 
@@ -15,7 +15,7 @@ window.onload = () => {
     if(nocrb){
     nocrb.onclick = nocrbAlert;
     function nocrbAlert(){
-        alert("You do not have a Credit Rebuilder account. Call +1-(877)-328-4495 to open one");
+        alert("You do not have Credit Rebuilder, to open one, please call (877) 328-4495.");
     }
 }
 
@@ -23,7 +23,7 @@ window.onload = () => {
     if(noscrd){
     noscrd.onclick = noscrdAlert;
     function noscrdAlert(){
-        alert("You do not have a Secured Card account. Call +1-(877)-328-4495 to open one");
+        alert("You do not have Secured Card, to open one, please call (877) 328-4495.");
     }
 }
 
@@ -31,7 +31,7 @@ window.onload = () => {
     if(noloan){
     noloan.onclick = noloanalert;
     function noloanalert(){
-        alert("You do not have a Loan account. Call +1-(877)-328-4495 to open one");
+        alert("You do not have a Loan, to open one, please call (877) 328-4495.");
     }
 }
 
@@ -50,6 +50,14 @@ window.onload = () => {
     var admin_table = document.getElementById("admins");
     var inquiry_table = document.getElementById("inquiry-section");
 
+    // -----------------sub-nav---------------------
+
+    var admin_sub = document.getElementById("admin-sub");
+    var client_sub = document.getElementById("client-sub");
+    var loan_sub = document.getElementById("loan-sub");
+    var loc_sub = document.getElementById("loc-sub");
+    var scard_sub = document.getElementById("scard-sub");
+    var cardrb_sub = document.getElementById("cardrb-sub");
 
 
     var admins = document.getElementById("admin-btn");
@@ -75,6 +83,15 @@ window.onload = () => {
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
         inquiryt.style.background = "";
+
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="flex"
+        client_sub.style.display="none";
+        loan_sub.style.display="none";
+        loc_sub.style.display="none";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="none";
+
     }
 
 
@@ -102,6 +119,15 @@ window.onload = () => {
         moneyt.style.background = "";
         inquiryt.style.background = "";
 
+        // ----------sub-nav-----------------------
+
+        admin_sub.style.display="none";
+        client_sub.style.display="flex";
+        loan_sub.style.display="none";
+        loc_sub.style.display="none";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="none";
+
     }
 
 
@@ -128,6 +154,14 @@ window.onload = () => {
         moneyt.style.background = "";
         inquiryt.style.background = "";
 
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="none";
+        client_sub.style.display="none";
+        loan_sub.style.display="flex";
+        loc_sub.style.display="none";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="none";
+
     }
 
     var linecr = document.getElementById("linecr-btn");
@@ -152,6 +186,14 @@ window.onload = () => {
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
         inquiryt.style.background = "";
+
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="none";
+        client_sub.style.display="none";
+        loan_sub.style.display="none";
+        loc_sub.style.display="flex";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="none";
     }
 
 
@@ -177,6 +219,14 @@ window.onload = () => {
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
         inquiryt.style.background = "";
+
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="none";
+        client_sub.style.display="none";
+        loan_sub.style.display="none";
+        loc_sub.style.display="none";
+        scard_sub.style.display="flex";
+        cardrb_sub.style.display="none";
     }
 
     var cardrbbtn = document.getElementById("cardrb-btn");
@@ -201,6 +251,14 @@ window.onload = () => {
         cardrbbtn.style.background = "white";
         moneyt.style.background = "";
         inquiryt.style.background = "";
+
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="none";
+        client_sub.style.display="none";
+        loan_sub.style.display="none";
+        loc_sub.style.display="none";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="flex";
     }
 
     var moneyt = document.getElementById("moneyt-btn");
@@ -226,6 +284,14 @@ window.onload = () => {
         moneyt.style.background = "white";
         inquiryt.style.background = "";
 
+        // ----------sub-nav-----------------------
+        admin_sub.style.display="none";
+        client_sub.style.display="none";
+        loan_sub.style.display="none";
+        loc_sub.style.display="none";
+        scard_sub.style.display="none";
+        cardrb_sub.style.display="none";
+
     }
 
     var inquiryt = document.getElementById("inquiry-btn");
@@ -250,6 +316,14 @@ window.onload = () => {
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
         inquiryt.style.background = "white";
+
+            // ----------sub-nav-----------------------
+            admin_sub.style.display="none";
+            client_sub.style.display="none";
+            loan_sub.style.display="none";
+            loc_sub.style.display="none";
+            scard_sub.style.display="none";
+            cardrb_sub.style.display="none";
     }
 
 
