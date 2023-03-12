@@ -72,6 +72,13 @@ Route::post('/selfproc/{id}',[ClientController::class, 'selfUpdateProccess'])->n
 
 
 
+Route::get('/payform',function(){
+    return view('payform');
+})->name('payform');
+
+
+
+
 // +++++++++++++++++++++   CREDIT REBUILDER   ++++++++++++++++++++++++
 
 Route::get('/newcrbuilder',[CreditRebuilderController::class,'createAccountForm'])->name('AddCreditRebuilder');

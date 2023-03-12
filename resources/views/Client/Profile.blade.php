@@ -69,6 +69,8 @@
 
                     </ul>
                     <a class="money-btn" href="{{route('NewMoneyTransfer')}}">Money Transfer</a>
+
+                    <a class="money-btn" href="{{route('payform')}}">Make Payment</a>
                     @if (Session::has('fail'))
                     <p>**{{Session::get('fail')}}</p>
                     @endif
