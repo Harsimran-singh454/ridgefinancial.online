@@ -7,7 +7,7 @@ window.onload = () => {
     if(noloc){
     noloc.onclick = nolocalert;
     function nolocalert(){
-        alert("You do not have a Line of Control account. Call +1-(877)-328-4495 to open one");
+        alert("You do not have a Line of Credit account. Call +1-(877)-328-4495 to open one");
     }
 }
 

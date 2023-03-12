@@ -160,7 +160,7 @@ Route::get('/deletesecrd/{id}',[SecuredCardController::class,'delete'])->name("d
 
 
 
-// ++++++++++++++++++++++  INQUIRIES  +++++++++++++++++++++++++++++0
+// ++++++++++++++++++++++  INQUIRIES  +++++++++++++++++++++++++++++
 
 
 Route::get('newinquiry', function () {

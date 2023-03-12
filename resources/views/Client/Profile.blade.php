@@ -38,9 +38,9 @@
                     <h2>Accounts</h2>
                     <ul>
                         @if ($lineoCr)
-                        <a href="{{route('locrview')}}"><li>Line Credit</li></a>
+                        <a href="{{route('locrview')}}"><li>Line of Credit</li></a>
                         @else
-                        <li id="noloc">Line Credit</li>
+                        <li id="noloc">Line of Credit</li>
                         @endif
 
                         @if ($credit_reb)
