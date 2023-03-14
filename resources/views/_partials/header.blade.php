@@ -21,6 +21,9 @@
         <a href="{{route('Dashboard')}}"><img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt=""></a>
         @elseif(Session::has('LoggedClient'))
         <a href="{{route('clientProfile')}}"><img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt=""></a>
+        @elseif(!Session::has('LoggedUser') && !Session::has('LoggedClient'))
+        <a href=""><img id="logo" src="/images/logo.png" width="200" style="margin: 1em;" alt=""></a>
+
         @endif
 
 <nav>
