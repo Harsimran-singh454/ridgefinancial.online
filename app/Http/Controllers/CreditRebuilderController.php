@@ -49,12 +49,22 @@ class CreditRebuilderController extends Controller
     public function update(Request $req, $id){
         {
             $data=credit_rebuilder::find($id);
-            $data->monthly_fee = $req->monthly_fee;
+            $data->title = $req->title;
+            $data->name = $req->name;
+            $data->DOB = $req->DOB;
+            $data->email = $req->email;
+            $data->phone = $req->phone;
+            $data->address = $req->address;
+            $data->term = $req->term;
+            $data->status = $req->status;
+            $data->account_number = $req->account_number;
+            $data->client_id = $req->client_id;
             $data->amount_saved = $req->amount_saved;
             $data->tot_lineOfCr = $req->tot_lineOfCr;
             $data->tot_payments = $req->tot_payments;
-            $data->tot_payments_toDate = $req->tot_payments_toDate;
+            $data->term = $req->term;
             $data->due_date = $req->due_date;
+
             $data->save();
             return redirect()->route('Dashboard');
     }

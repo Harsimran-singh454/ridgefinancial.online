@@ -16,7 +16,7 @@
 
             <nav class = "admin-nav">
                 <h2 style="text-align:center">Browse</h2>
-                <section>
+                <section style="margin-bottom:1em;">
                 <img id="open" onclick = expandMenu() src="/images/arrow_righ.svg"  alt="open-menu">
                 <img id="close" onclick = closeMenu() src="/images/arrow_drop_down.svg" alt="close-menu">
                 </section>

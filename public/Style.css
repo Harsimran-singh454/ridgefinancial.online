@@ -20,29 +20,35 @@ header nav{
     justify-content: space-between;
     padding: 0px 2em;
     align-items: center;
-
 }
 
 header nav .drop-down-menu{
     display: none;
 }
 
+.sub-nav{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color:#79c6dd;
+    border-radius: 10px;
+}
 
 .sub-nav a{
     list-style-type: disc;
     text-decoration: none;
     color:black;
-    background-color: white;
     border-radius: 8px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .sub-nav a li{
+    list-style: none;
     border-style: none !important;
+    padding: 0px;
+    margin: 0px !important;
 }
-
-
-
-
 
 /* --------------------------  Login Forms  ---------------------------- */
 
@@ -117,6 +123,10 @@ header nav .drop-down-menu{
     border-style: none;
     margin: 5% 10%;
     padding: 5%;
+}
+
+fieldset{
+    border-radius: 15px;
 }
 
 #trans-bal {
@@ -204,7 +214,9 @@ header nav .drop-down-menu{
 }
 #menu{
     display: none;
+
 }
+
 
 
 .wrapper .content .admin-nav div{
@@ -218,24 +230,30 @@ header nav .drop-down-menu{
 
 .wrapper .content .admin-nav div ul{
     list-style: none;
-    margin: 2% 2%;
-
+    margin: 2% 0%;
 }
 
 .wrapper .content .admin-nav div ul li{
     margin: 1em 0.5em;
-    padding: 2% 1em;
-    border-radius: 5px;
+    padding: 5% 1%;
+    border-radius:7px 7px 0px 0px;
     cursor: pointer;
-    border-top: 1px solid rgba(0, 0, 0, 0.219);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.121);
+}
 
+.wrapper .content .admin-nav div ul li :nth-child(4){
+    border-top: 1px solid rgba(0, 0, 0, 0.121) !important;
 }
 
 
 .wrapper .content .admin-nav div ul li:hover{
     color: gray;
 }
+
+.admin-actions li{
+    border-style: none !important;
+}
+
 
 .admin-actions a{
     text-decoration: none;
@@ -247,7 +265,9 @@ header nav .drop-down-menu{
     color: gray;
 }
 
-
+#BAN-btn{
+    border-bottom: 0px !important;
+}
 
 /* ------------------------- Tables --------------------------- */
 

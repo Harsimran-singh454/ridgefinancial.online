@@ -59,16 +59,19 @@ class SecuredCardController extends Controller
         {
 
             $data=secured_card::find($id);
-            $data->credit_limit = $req->credit_limit;
-            $data->current_balance = $req->current_balance;
-            $data->payment_amount = $req->payment_amount;
-            $data->authorizations = $req->authorizations;
-            $data->credit_remaining = $req->credit_remaining;
-            $data->due_date = $req->due_date;
-            $data->cycle_date = $req->cycle_date;
-            $data->transactions = $req->transactions;
-            $data->card_number = $req->card_number;
-            $data->pin_number = $req->pin_number;
+            $data->name = $req->name;
+            $data->name_card = $req->name_card;
+            $data->DOB = $req->DOB;
+            $data->marital_status = $req->marital_status;
+            $data->email = $req->email;
+            $data->phone = $req->phone;
+            $data->address = $req->address;
+            $data->mailing_address = $req->mailing_address;
+            $data->request_limit = $req->request_limit;
+            $data->cred_card_inst = $req->cred_card_inst;
+            $data->transfer_amount = $req->transfer_amount;
+            $data->acc_number = $req->acc_number;
+            $data->approved = $req->approved;
 
             $data->save();
             return redirect()->route('Dashboard');

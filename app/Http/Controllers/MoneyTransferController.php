@@ -37,7 +37,7 @@ class MoneyTransferController extends Controller
 
         $data = money_transfer::create($request->all());
         if($data){
-        return redirect()->back()->with('Success','Your request for transferring money has been submitted. You will be notified once the transefer is completed');
+        return redirect()->back()->with('Success','Your request for transferring money has been submitted. You will be notified once the transfer is completed');
          } else {
         return back()->with('Fail','Something went wrong');
         }

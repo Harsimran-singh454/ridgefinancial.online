@@ -46,6 +46,18 @@ class LineOfCrController extends Controller
     public function update(Request $req, $id){
         {
             $data=line_of_credit::find($id);
+            $data->title = $req->title;
+            $data->name = $req->name;
+            $data->DOB = $req->DOB;
+            $data->email = $req->email;
+            $data->phone = $req->phone;
+            $data->work_number = $req->work_number;
+            $data->address = $req->address;
+            $data->request_amount = $req->request_amount;
+            $data->username = $req->username;
+            $data->status = $req->status;
+            $data->account_number = $req->account_number;
+            $data->client_id = $req->client_id;
             $data->credit_limit = $req->credit_limit;
             $data->current_balance = $req->current_balance;
             $data->authorizations = $req->authorizations;

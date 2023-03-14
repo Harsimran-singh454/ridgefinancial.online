@@ -72,12 +72,14 @@
         </div>
                 <div id="e-transfer-details" style="display: none;">
                    @if ($loc)
-                   <label>E-mail of Receipient:</label>
-                   <label for="rec_email"></label>
-                   <input type="email" name="rec_email">
-
-                   <label for="LOC_num">Your Line Of Credit Account Number : </label>
+                <div style="padding:0px">
+                   <label for="rec_email">E-mail of Receipient:</label>
+                   <input type="email" name="rec_email"> <br>
+                </div>
+                <div style="padding:0px">
+                    <label for="LOC_num">Your Line Of Credit Account Number : </label>
                    <input type="number" name="LOC_num" id="" value = "{{$loc->account_number}}">
+                </div>
 
                    @else
                    <p>You Don't have a line of Credit Account</p>
@@ -109,7 +111,7 @@
 
           <hr>
             <div>
-                <label for="details">Details : </label>
+                <label for="details">Note to Receipient : </label>
                 <input type="text" name="details">
                 @error('details')**{{$message}}  @enderror
             </div>
@@ -142,7 +144,7 @@
             }
             if(method.value == "e-trans"){
                 card.style.display = 'none';
-                e_trans.style.display = 'flex';
+                e_trans.style.display = 'block';
                 dr_dpst.style.display = 'none';
             }
             if(method.value == "dr-dpst"){

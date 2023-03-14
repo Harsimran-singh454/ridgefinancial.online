@@ -10,8 +10,12 @@ use App\Http\Controllers\LoanController;
 use App\Http\Controllers\SecuredCardController;
 use App\Http\Controllers\MoneyTransferController;
 use App\Http\Controllers\InquiriesController;
+use App\Http\Controllers\PaymentController;
+
 
 use App\Models\inquiries;
+use App\Models\client;
+
 
 
 
@@ -92,7 +96,9 @@ Route::post('/editcardrbprocc/{id}',[CreditRebuilderController::class,'update'])
 Route::get('/deletecrb/{id}',[CreditRebuilderController::class,'delete'])->name("deleteCardrb");
 
 
-
+Route::get('/credit-rebuilder-request',function(){
+    return view('Credit_Rebuilder.newReq');
+});
 
 
 
@@ -110,6 +116,9 @@ Route::get('/deleteloc/{id}',[LineOfCrController::class,'delete'])->name("delete
 
 
 
+Route::get('/LineOfCredit-request',function(){
+    return view('Line_Of_Credit.newReq');
+});
 
 
 
@@ -129,7 +138,9 @@ Route::get('/deleteloan/{id}',[LoanController::class,'delete'])->name("deleteLoa
 
 
 
-
+Route::get('/loans-request',function(){
+    return view('Loans.newReq');
+});
 
 
 
@@ -164,7 +175,9 @@ Route::post('/editscrcardprocc/{id}',[SecuredCardController::class,'update'])->n
 Route::get('/deletesecrd/{id}',[SecuredCardController::class,'delete'])->name("deleteSecrd");
 
 
-
+Route::get('/Secured-Card-request',function(){
+    return view('Secured_Card.newReq');
+});
 
 
 // ++++++++++++++++++++++  INQUIRIES  +++++++++++++++++++++++++++++
@@ -192,4 +205,27 @@ Route::any('reject/{id}', function($id){
     $data->save();
     return redirect()->back();
 })->name('reject');
+
+
+
+
+
+// -------------------------------------------------------------------
+
+Route::get('/generate-Ban', function(){
+    return view('BAN');
+});
+
+
+
+Route::get('/make-a-payment',function(){
+    $data = client::find(Session('LoggedClient'));
+    return view('paymentForm',['client' => $data]);
+});
+
+Route::POST('/processingreq/{id}',[PaymentController::class,'payRequest'])->name('pay');
+
+
+
+
 

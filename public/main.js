@@ -75,7 +75,7 @@ window.onload = () => {
 
         // -------- background colour ---------------
 
-        admins.style.background = "white";
+        admins.style.background = "#79c6dd";
         clients.style.background = "";
         loans.style.background = "";
         linecr.style.background = "";
@@ -111,7 +111,7 @@ window.onload = () => {
 
         // -------- background colour ---------------
         admins.style.background = "";
-        clients.style.background = "white";
+        clients.style.background = "#79c6dd";
         loans.style.background = "";
         linecr.style.background = "";
         scardbtn.style.background = "";
@@ -147,7 +147,7 @@ window.onload = () => {
 
         admins.style.background = "";
         clients.style.background = "";
-        loans.style.background = "white";
+        loans.style.background = "#79c6dd";
         linecr.style.background = "";
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
@@ -181,7 +181,7 @@ window.onload = () => {
         admins.style.background = "";
         clients.style.background = "";
         loans.style.background = "";
-        linecr.style.background = "white";
+        linecr.style.background = "#79c6dd";
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
@@ -215,7 +215,7 @@ window.onload = () => {
         clients.style.background = "";
         loans.style.background = "";
         linecr.style.background = "";
-        scardbtn.style.background = "white";
+        scardbtn.style.background = "#79c6dd";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
         inquiryt.style.background = "";
@@ -248,7 +248,7 @@ window.onload = () => {
         loans.style.background = "";
         linecr.style.background = "";
         scardbtn.style.background = "";
-        cardrbbtn.style.background = "white";
+        cardrbbtn.style.background = "#79c6dd";
         moneyt.style.background = "";
         inquiryt.style.background = "";
 
@@ -281,7 +281,7 @@ window.onload = () => {
         linecr.style.background = "";
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
-        moneyt.style.background = "white";
+        moneyt.style.background = "#79c6dd";
         inquiryt.style.background = "";
 
         // ----------sub-nav-----------------------
@@ -315,7 +315,7 @@ window.onload = () => {
         scardbtn.style.background = "";
         cardrbbtn.style.background = "";
         moneyt.style.background = "";
-        inquiryt.style.background = "white";
+        inquiryt.style.background = "#79c6dd";
 
             // ----------sub-nav-----------------------
             admin_sub.style.display="none";

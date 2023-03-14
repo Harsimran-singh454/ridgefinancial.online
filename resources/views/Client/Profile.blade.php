@@ -6,8 +6,9 @@
 
 
 
-<a style="position:absolute; right:0%; margin: 0px 2em; text-decoration:none; background-color:#79c6dd26; padding: 0.3em 1em; border-radius: 15px; color:black;" href="{{route('logoutClient')}}">Logout</a>
-<main>
+
+<main style="position: relative">
+    <a style="position:absolute; z-index:1; right:3%; margin: 0px 2em; text-decoration:none; color:white; background-color:#79c6dd; padding: 0.4em 1.2em; border-radius: 15px;" href="{{route('logoutClient')}}">Logout</a>
     <div class="wrapper">
         <section class="container">
 

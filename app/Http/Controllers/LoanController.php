@@ -49,6 +49,18 @@ class LoanController extends Controller
     public function update(Request $req, $id){
         {
             $data=loan::find($id);
+            $data->title = $req->title;
+            $data->name = $req->name;
+            $data->DOB = $req->DOB;
+            $data->email = $req->email;
+            $data->phone = $req->phone;
+            $data->work_number = $req->work_number;
+            $data->address = $req->address;
+            $data->loan_amount = $req->loan_amount;
+            $data->purpose = $req->purpose;
+            $data->status = $req->status;
+            $data->account_number = $req->account_number;
+            $data->client_id = $req->client_id;
             $data->account_balance = $req->account_balance;
             $data->due_date = $req->due_date;
             $data->payment_amount = $req->payment_amount;
@@ -56,11 +68,10 @@ class LoanController extends Controller
             $data->current_balance = $req->current_balance;
             $data->interest_rate = $req->interest_rate;
             $data->term = $req->term;
-            $data->payment = $req->payment;
 
             $data->save();
 
-            return redirect()->route('Dashboard');
+            return redirect()->back()->with('Success','Information Has Been Update');
     }
     }
 
